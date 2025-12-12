@@ -10,13 +10,13 @@ public class Quiz {
         public static void main(String[] args) throws Exception {
                 // Create Categories
                 Category pop = new Category("Pop",
-                                "You might be labeled as basic, but you know what you like and aren't afraid to show it! You're friendly and outgoing, and love to stay on top of the latest trends.");
+                                "You might be labeled as basic, but you know what you like and aren't afraid to show it! \nYou're friendly and outgoing, and love to stay on top of the latest trends.");
                 Category country = new Category("Country", 
-                                "You value tradition and have a strong sense of community, and who knows, you might even be a huge patriot!");
+                                "You value tradition and have a strong sense of community, \nand who knows, you might even be a huge patriot!");
                 Category hiphop = new Category("Hip-Hop",
-                                "You cherish the relationships in your life and love to have fun with friends. You're outgoing and confident, and love to express yourself through your style and creativity.");
+                                "You cherish the relationships in your life and love to have fun with friends. \nYou're outgoing and confident, and love to express yourself through your style and creativity.");
                 Category rock = new Category("Rock", 
-                                "You might be a lone wolf, or you're heavily involved in your community. You have a strong sense of individuality and aren't afraid to stand out from the crowd.");
+                                "You might be a lone wolf, or you're heavily involved in your community. \nYou have a strong sense of individuality and aren't afraid to stand out from the crowd.");
                 // Create Questions
                 Question q1 = new Question("You're at a small café in the city. What will you get to drink?");
                 // Attach Answers to Questions
