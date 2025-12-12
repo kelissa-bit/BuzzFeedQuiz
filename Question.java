@@ -19,7 +19,7 @@ public class Question {
         // prints out all the answer choices
         for (int i = 0; i < this.possibleAnswers.length; i++) {
             String choice = Integer.toString(i + 1);
-            System.out.println("[" + choice + "]:" +
+            System.out.println("[" + choice + "] " +
                     this.possibleAnswers[i].label);
         }
         try {
