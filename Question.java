@@ -1,4 +1,3 @@
-
 /* Irene Feng 10/12/2022
 A question class with Answers.
 */
