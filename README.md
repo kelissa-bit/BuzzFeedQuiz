@@ -23,3 +23,4 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 javac *.java -d bin
 ```
 Run `Quiz.java` file in src folder. # BuzzFeedQuiz
+# Hashmap

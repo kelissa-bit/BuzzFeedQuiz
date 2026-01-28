@@ -3,14 +3,17 @@
  * Irene Feng Nov 2022
  * This is the class where we create the Quiz and run it. It has the main method.  
  */
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Scanner;
 
 
 public class Quiz {
         static Scanner sc = new Scanner(System.in);
+        static FileSave KelissasAwesomeFile;
 
         public static void main(String[] args) throws Exception {
+                KelissasAwesomeFile = new FileSave();
                 // Create Categories
                 Category pop = new Category("Pop",
                                 "You might be labeled as basic, but you know what you like and aren't afraid to show it! \nYou're friendly and outgoing, and love to stay on top of the latest trends.");
@@ -79,7 +82,6 @@ public class Quiz {
 
                 
         // For each question, ask, read input, store answer.
-                HashMap<String, String> nameAndGenre = new HashMap();
                 
                 String name = gameIntro(); 
                 Question[] qList = { q1, q2, q3, q4, q5, q6, q7, q8, q9 };
@@ -93,18 +95,20 @@ public class Quiz {
                
                 // these need to be in the same order or the points will be incorrect!
                 int index = getMostPopularCatIndex(cList);
-                nameAndGenre.put(name, cList[index].label); 
+                KelissasAwesomeFile.updateResult(name, cList[index].label);
                 System.out.println("Your music genre is... " + cList[index].label + "! ");
                 System.out.println(cList[index].description);
-                System.out.println(nameAndGenre);
 
         }
 
         public static String gameIntro() {
-                // requires 1 to keep going
                 System.out.println("Which Music Genre Are You?");
                 System.out.println("You get to choose numbers 1-4 for every question. Enter your name to play!");
                 String name = sc.nextLine();
+                if (KelissasAwesomeFile.getResults().containsKey(name)) { 
+                        System.out.println("This name is taken. Please type another!");
+                        return gameIntro();
+                }
                 return name;
                 }
 
